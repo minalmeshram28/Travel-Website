@@ -13,3 +13,5 @@ CREATE TABLE book_form (
     arrivals DATE NOT NULL,
     leaving DATE NOT NULL
 );
+
+select * from book_form;            
