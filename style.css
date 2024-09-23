@@ -186,20 +186,18 @@ section {
 
 .home .swiper-button-next,
 .home .swiper-button-prev {
-  top: inherit;
-  left: inherit;
-  bottom: 0;
-  right: 0;
-  height: 7rem;
-  width: 7rem;
-  background: var(--white);
-  color: var(--black);
+  background: rgba(255, 255, 255, 0.3);
+  color: rgba(0, 0, 0, 0.6);
+  border: none;
+  box-shadow: none;
+  backdrop-filter: blur(5px);
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .home .swiper-button-next:hover,
 .home .swiper-button-prev:hover {
-  background: var(--main-color);
-  color: var(--white);
+  background: rgba(255, 255, 255, 0.6);
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .home .swiper-button-next::after,
@@ -240,22 +238,28 @@ section {
 
 .home-about {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   flex-wrap: wrap;
 }
 
-.home-about .image {
+.home-about .image,
+.home-about .content {
   flex: 1 1 41rem;
+  display: flex;
+  align-items: center;
 }
 
 .home-about .image img {
   width: 100%;
+  height: auto;
 }
 
 .home-about .content {
-  flex: 1 1 41rem;
   padding: 3rem;
   background: var(--light-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .home-about .content h3 {
@@ -404,13 +408,20 @@ section {
   display: block;
 }
 
+/* review */
 .reviews {
   background: var(--light-bg);
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: stretch;
 }
 
 .reviews .slide {
   padding: 2rem;
   border: var(--border);
+  border-radius: 5%;
   background: var(--white);
   text-align: center;
   box-shadow: var(--box-shadow);

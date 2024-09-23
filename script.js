@@ -17,6 +17,14 @@ var swiper = new Swiper(".home-slider", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
 });
 
 var swiper = new Swiper(".reviews-slider", {
@@ -24,6 +32,10 @@ var swiper = new Swiper(".reviews-slider", {
   loop: true,
   autoHeight: true,
   spaceBetween: 20,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
   breakpoints: {
     0: {
       slidesPerView: 1,
